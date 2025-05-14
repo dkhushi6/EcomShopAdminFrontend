@@ -13,17 +13,20 @@ const SpecificEdit = () => {
   const [adminId, setAdminId] = useState("");
 
   const handlePublish = async () => {
-    const res = await axios.post("http://localhost:4010/product/edit", {
-      newTitle,
-      pID,
-      newDescription,
-      newPrice,
-      newSize,
-      newColor,
-      newCategory,
-      newMedia,
-      adminId,
-    });
+    const res = await axios.post(
+      "https://shopecombackend-6e34.onrender.com/product/edit",
+      {
+        newTitle,
+        pID,
+        newDescription,
+        newPrice,
+        newSize,
+        newColor,
+        newCategory,
+        newMedia,
+        adminId,
+      }
+    );
     console.log(res.data);
     setCategory("");
     setColor("");

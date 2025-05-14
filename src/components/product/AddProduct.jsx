@@ -23,16 +23,19 @@ const AddProduct = () => {
   }, []);
 
   const handlePublish = async () => {
-    const res = await axios.post("http://localhost:4010/product/add", {
-      title,
-      description,
-      price,
-      size,
-      color,
-      category,
-      media,
-      adminId: adminId,
-    });
+    const res = await axios.post(
+      "https://shopecombackend-6e34.onrender.com/product/add",
+      {
+        title,
+        description,
+        price,
+        size,
+        color,
+        category,
+        media,
+        adminId: adminId,
+      }
+    );
     console.log(res.data);
   };
   const handleCancel = async () => {

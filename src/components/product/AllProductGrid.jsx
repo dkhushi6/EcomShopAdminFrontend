@@ -10,7 +10,7 @@ const AllProductGrid = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       const res = await axios.post(
-        "http://localhost:4010/product/adminSpecific",
+        "https://shopecombackend-6e34.onrender.com/product/adminSpecific",
         {
           adminId,
         }

@@ -5,7 +5,9 @@ const UserGridView = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get("http://localhost:4010/alluser");
+      const res = await axios.get(
+        "https://shopecombackend-6e34.onrender.com/alluser"
+      );
       if (res) {
         console.log(res.data.allUser);
         setUsers(res.data.allUser);

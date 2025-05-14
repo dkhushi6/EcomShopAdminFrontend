@@ -13,14 +13,17 @@ const Signup = () => {
   const navigate = useNavigate();
 
   const handleSignup = async () => {
-    const res = await axios.post("http://localhost:4010/admin/signup", {
-      name,
-      email,
-      password,
-      phoneNumber,
-      adminImg,
-      adminUsername,
-    });
+    const res = await axios.post(
+      "https://shopecombackend-6e34.onrender.com/admin/signup",
+      {
+        name,
+        email,
+        password,
+        phoneNumber,
+        adminImg,
+        adminUsername,
+      }
+    );
     console.log(res.data);
     if (res.data.message === "Admin created successfully !!") {
       navigate("/login");

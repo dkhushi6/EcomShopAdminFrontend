@@ -12,15 +12,18 @@ const Edit = () => {
   const [pID, setPID] = useState("");
 
   const handlePublish = async () => {
-    const res = await axios.post("http://localhost:4010/product/edit", {
-      newTitle,
-      newDescription,
-      newPrice,
-      newSize,
-      newColor,
-      newCategory,
-      newMedia,
-    });
+    const res = await axios.post(
+      "https://shopecombackend-6e34.onrender.com/product/edit",
+      {
+        newTitle,
+        newDescription,
+        newPrice,
+        newSize,
+        newColor,
+        newCategory,
+        newMedia,
+      }
+    );
     console.log(res.data);
   };
   const handleCancel = async () => {

@@ -10,7 +10,7 @@ const AllProductList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       const res = await axios.post(
-        "http://localhost:4010/product/adminSpecific",
+        "https://shopecombackend-6e34.onrender.com/product/adminSpecific",
         {
           adminId,
         }
@@ -21,9 +21,12 @@ const AllProductList = () => {
   }, []);
 
   const handleDelete = async () => {
-    const res = await axios.delete("http://localhost:4010/delete", {
-      pID: products._id,
-    });
+    const res = await axios.delete(
+      "https://shopecombackend-6e34.onrender.com/delete",
+      {
+        pID: products._id,
+      }
+    );
   };
 
   const navigate = useNavigate();
