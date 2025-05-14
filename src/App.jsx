@@ -6,7 +6,7 @@ import Grid from "./components/product/Grid";
 import AddProduct from "./components/product/AddProduct";
 import Edit from "./components/product/Edit";
 import ProductView from "./components/product/ProductView";
-import SpecificEdit from "./components/product/specificEdit";
+import SpecificEdit from "./components/product/SpecificEdit";
 import UserGrid from "./components/user/UserGrid";
 import UserList from "./components/user/UserList";
 import Login from "./components/authentication/Login";
